@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Camp City | Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/styles.css" />
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav" class="nav">
+        <div class="container">
+            <a id="nav-title" class="nav-title" href="index.html">Camp City</a>
+            
+            <!-- Select-a-camp drop-down list -->
+            <ul id="header-nav" class="header-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mailto:campciti@info" target="_top">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Camp selection section -->
+    <div id="camp-selection">
+        <div class="container">
+            <select name="camps" required>
+                <option value="none">Select a camp:</option>
+                <option value="camp-1">Crystal Lake Camp</option>
+                <option class="opt2" value="camp-2">Sleepaway Camp</option>
+                <option value="camp-3">Camp Pendleton</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Parent section -->
+    <div id="form">
+        <div class="container">
+            <form name="myForm" onsubmit="return validateForm()" method="post" action="success.html">
+                <fieldset>
+                    <legend>Parent/Guardian Information</legend>
+                    First name:<br>
+                    <input type="text" name="firstname" placeholder="Parents first name" autofocus> 
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="lastname" placeholder="Parent's last name">
+                    <br>
+                    Relationship to child:<br>
+                    <input type="text" name="relationship" placeholder="Relatioship to child?">
+                    <br>
+                    Email:<br>
+                    <input type="email" name="email" placeholder="email@gmail.com" required>
+                    <br>
+                    Phone:<br>
+                    <input type="tel" id="phone" name="phone" placeholder="619-123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required>
+                    <br>
+                    Address:<br>
+                    <input type="text" name="address1" placeholder="123 Apple St." required><br>
+                    <input type="text" name="address2" placeholder="Apt #"><br>
+                    <input type="text" name="city" placeholder="City" required><br>
+                    <input type="text" name="state" placeholder="State" size="3" maxlength="2" pattern="[A-Za-z]{2}" title="Two letter state abbreviation." required> Zip: <input type="text" name="zip" pattern="[0-9]{5}" placeholder="91234" size="6" maxlength="5" title="5-digit zip code" required>
+
+                </fieldset>
+
+            <!-- Child section -->
+                <fieldset>
+                    <legend>Your Happy Camper Info</legend>
+                    First name:<br>
+                    <input type="text" name="child-name" placeholder="Child first name">
+                    <input type="text" name="child-middlename" placeholder="Middle Initial" pattern="[A-Za-z]{1}" size="8" maxlength="1">
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="child-lastname" placeholder="Child last name" required>
+                    <br>
+                    Gender:<br>
+                    <input type="radio" name="gender" value="boy"> Boy <br>
+                    <input type="radio" name="gender" value="girl"> Girl <br>
+                    Date of Birth:<br>
+                    <input type="date" name="dob" required><br>
+                    Medical Conditions:<br>
+                    <textarea rows="8" cols="50" placeholder="List medical conditions and or special needs for your child."></textarea>
+                    <br>
+                    <input type="submit" name="submit" value="Submit Form" id="submit-btn">
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <div id="footer">
+        <div class="container">
+            <div class="column">
+                <h4>Follow Camp City</h4>
+                <p>
+                    <a href="#">Twitter</a>
+                    <br>
+                    <a href="#">Facebook</a>
+                    <br>
+                    <a href="#">YouTube</a>
+                </p>
+            </div>
+            <div class="column">
+                <h4>Why camp with us?</h4>
+                <p>
+                    Non-profit and enriching kids life.
+                </p>
+                <p>
+                    Learn to build camp fires,setup tents and more.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- copyright section -->
+    <div class="copyright">
+        <p>&copy;Copyright <a href="tacticalprogrammer.com"> TacticalProgrammer.com</a></p>
+    </div>
+
+</body>
+</html>
